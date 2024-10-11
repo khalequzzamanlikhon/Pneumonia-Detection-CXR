@@ -34,7 +34,7 @@ The model architecture integrates two pre-trained base models, EfficientNetB0 an
                                                 |                         |                       
                                        +-----------------------+  +-----------------------+  
                                        |   EfficientNetB0      |  |    DenseNet121        |
-                                       |    (Feature Extractor) |  |    (Feature Extractor) |
+                                       |    (Feature Extractor) |  |    (Feature Extractor) 
                                        +-----------------------+  +-----------------------+
                                                 |                         |
                                                 |                         |
