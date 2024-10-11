@@ -10,7 +10,8 @@ to avoid critical situations and deaths. Following [1](#References) this researc
 
 ## 1. Methodology
 
-1.1 Data Preprocessing & Augmentation
+1.1 **Data Preprocessing & Augmentation**
+
 The dataset used for this project consists of chest X-ray images classified into two categories: pneumonia and normal. The training dataset was augmented using the following transformations:
 
    - Rescaling: Pixel values were rescaled by 1/255.0 to normalize the input.
@@ -20,7 +21,7 @@ The dataset used for this project consists of chest X-ray images classified into
    - Brightness Adjustments: Brightness varied between 80% and 120% of the original.
    - Validation Split: 15% of the training data was reserved for validation.
 
-1.2 Model architecture
+1.2 **Model architecture**
 
 The model architecture integrates two pre-trained base models, EfficientNetB0 and DenseNet121, which extract rich feature representations from input images. These models are set as non-trainable during initial training. A Multi-Head Self-Attention mechanism is applied to enhance feature extraction to capture global dependencies, followed by Channel Attention to focus on the most important channels in the feature maps. A residual block is then added to prevent feature degradation and facilitate smooth gradient flow. After these attention mechanisms and residual connections, the model uses Global Average Pooling to reduce the feature maps to a 1D vector. Finally, a dense layer with a sigmoid activation function is applied for binary classification, predicting whether the input image shows pneumonia or not.
 
